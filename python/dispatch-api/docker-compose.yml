@@ -1,0 +1,22 @@
+version: '3.5'
+services:
+  postgres:
+    container_name: dispatch-database
+    restart: always
+    image: postgres:latest
+    environment:
+      POSTGRES_PASSWORD: YOUR_PASSWORD
+      POSTGRES_USER: YOUR_USER
+    volumes:
+      - ../dispatch-database:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile_api
+    ports:
+      - "5000:5000"
+    environment:
+      RESCUE_DISPATCH_CONFIG: production
+

@@ -1,2 +1,2 @@
 # vincentm-codesamples
-Code samples from Vincent Moeykens
+Code samples for Vincent Moeykens
