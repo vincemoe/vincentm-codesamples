@@ -14,3 +14,4 @@ access my API to allow the dispatch to be added when it is finished transcriptio
 with placeholders. 
 - The Python interpreter version for this project is 3.7
 - Everything is run using the ```manage.py``` script.
+- This project can be spun up using the included ```docker-compose.yml``` file. Make sure to also run ```docker-compose up -d --build``` to ensure the image is built as well.
