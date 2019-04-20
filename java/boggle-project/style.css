@@ -1,0 +1,40 @@
+.root{
+    -fx-font-size: 18pt;
+    -fx-font-family: "Roboto";
+    -fx-base: rgb(255, 255, 255);
+    -fx-padding: 10px;
+}
+
+GridPane{
+    -fx-font-size: 30pt;
+
+}
+
+#cell_label{
+    -fx-background-color: #3F51B5;
+    -fx-text-fill: #FFFFFF;
+    -fx-alignment: center;
+    -fx-padding: 5px;
+    -fx-pref-width: 60px;
+    -fx-pref-height: 60px;
+}
+
+#cell_label_selected{
+    -fx-background-color: #303F9F;
+    -fx-text-fill: #FFFFFF;
+    -fx-alignment: center;
+    -fx-padding: 5px;
+    -fx-pref-width: 60px;
+    -fx-pref-height: 60px;
+}
+
+.button{
+}
+
+HBox{
+    -fx-spacing: 10px;
+}
+
+VBox{
+    -fx-spacing: 10px;
+}

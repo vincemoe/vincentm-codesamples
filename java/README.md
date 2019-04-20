@@ -24,3 +24,9 @@ a defined number of black and white levels. It then returns a filtered Bitmap.
 ```PositionImageHolder.java``` is a helper class that extends the built in Android 
 ImageView class. This class is a custom method of allowing a user to position an image
 (location and scale) over the drawing surface before drawing it. 
+
+## Code Samples from "Boggle" Project
+
+### Description
+The code in the folder ```boggle-project``` is all from my final project for CS 110 (Intermediate Programming).
+This code implements the game "Boggle" in Java in a simple custom UI. 

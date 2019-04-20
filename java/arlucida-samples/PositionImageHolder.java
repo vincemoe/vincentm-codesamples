@@ -23,6 +23,8 @@ public class PositionImageHolder extends android.support.v7.widget.AppCompatImag
     private static final int INVALID_POINTER_ID = -1;
     private static final String LOG_TAG = "PositionImageHolder";
 
+    // From SO 5790503
+
     // The ‘active pointer’ is the one currently moving our object.
     private int mActivePointerId = INVALID_POINTER_ID;
 
@@ -44,6 +46,7 @@ public class PositionImageHolder extends android.support.v7.widget.AppCompatImag
         // Create our ScaleGestureDetector
         mScaleDetector = new ScaleGestureDetector(context, new ScaleListener());
 
+        //Modified from SO
         borderPaint = new Paint();
         borderPaint.setARGB(255, 255, 128, 0);
         borderPaint.setStyle(Paint.Style.STROKE);
@@ -123,18 +126,22 @@ public class PositionImageHolder extends android.support.v7.widget.AppCompatImag
 
         return true;
     }
+    // End from SO
 
     /*
      * (non-Javadoc)
      *
      * @see android.view.View#draw(android.graphics.Canvas)
      */
+
+
     @Override
     public void draw(Canvas canvas) {
         super.draw(canvas);
         canvas.drawRect(0, 0, getWidth(), getHeight(), borderPaint);
     }
 
+    // Modified from SO 5790503
     @Override
     public void onDraw(Canvas canvas) {
         canvas.drawRect(0, 0, getWidth(), getHeight(), backgroundPaint);
@@ -155,6 +162,7 @@ public class PositionImageHolder extends android.support.v7.widget.AppCompatImag
             canvas.restore();
         }
     }
+    // END SO
 
     /*
      * (non-Javadoc)
@@ -191,6 +199,7 @@ public class PositionImageHolder extends android.support.v7.widget.AppCompatImag
     float pivotPointX = 0f;
     float pivotPointY = 0f;
 
+    // From SO 5790503
     private class ScaleListener extends
             ScaleGestureDetector.SimpleOnScaleGestureListener {
 
@@ -210,4 +219,5 @@ public class PositionImageHolder extends android.support.v7.widget.AppCompatImag
             return true;
         }
     }
+    // End from SO
 }
